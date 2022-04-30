@@ -1,0 +1,67 @@
+     1                                 %line 1+1 tuturial.asm
+     2                                 
+     3                                 
+     4                                 
+     5                                 
+     6                                 
+     7                                 
+     8                                 
+     9                                 
+    10                                 [section .data]
+    11                                 
+    12                                 EXIT_SUCCESS equ 0
+    13                                 SYS_exit equ 60
+    14                                 
+    15 00000000 11                     bVar1 db 17
+    16 00000001 09                     bVar2 db 9
+    17 00000002 00                     bResult db 0
+    18                                 
+    19 00000003 6842                   wVar1 dw 17000
+    20 00000005 2823                   wVar2 dw 9000
+    21 00000007 0000                   wResult dw 0
+    22                                 
+    23 00000009 40660301               dVar1 dd 17000000
+    24 0000000D 40548900               dVar2 dd 9000000
+    25 00000011 00000000               dResult dd 0
+    26                                 
+    27 00000015 80FE210A00000000       qVar1 dq 170000000
+    28 0000001D 804A5D0500000000       qVar2 dq 90000000
+    29 00000025 0000000000000000       qResult dq 0
+    30                                 
+    31                                 [section .text]
+    32                                 [global _start]
+    33                                 _start:
+    34                                 
+    35                                 
+    36                                 
+    37                                 
+    38                                 
+    39 00000000 8A0425[00000000]       mov al, byte [bVar1]
+    40 00000007 020425[00000000]       add al, byte [bVar2]
+    41 0000000E 880425[00000000]       mov byte [bResult], al
+    42                                 
+    43                                 
+    44                                 
+    45 00000015 668B0425[00000000]     mov ax, word [wVar1]
+    46 0000001D 66030425[00000000]     add ax, word [wVar2]
+    47 00000025 66890425[00000000]     mov word [wResult], ax
+    48                                 
+    49                                 
+    50                                 
+    51 0000002D 8B0425[00000000]       mov eax, dword [dVar1]
+    52 00000034 030425[00000000]       add eax, dword [dVar2]
+    53 0000003B 890425[00000000]       mov dword [dResult], eax
+    54                                 
+    55                                 
+    56                                 
+    57                                 
+    58                                 
+    59 00000042 488B0425[00000000]     mov rax, qword [qVar1]
+    60 0000004A 48030425[00000000]     add rax, qword [qVar2]
+    61 00000052 48890425[00000000]     mov qword [qResult], rax
+    62                                 
+    63                                 
+    64                                 last:
+    65 0000005A 48C7C03C000000         mov rax, SYS_exit
+    66 00000061 48C7C700000000         mov rdi, EXIT_SUCCESS
+    67 00000068 0F05                   syscall
