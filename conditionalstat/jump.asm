@@ -1,5 +1,6 @@
 
 ;program that implements basic jump instructions
+;conditional jump example
 
 section .data
 
