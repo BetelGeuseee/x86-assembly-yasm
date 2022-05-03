@@ -2,7 +2,7 @@
 x86 assembly basics using yasm assembler and gold linker
 
 
-# Toolchain needed to run these files
+# Toolchain 
  1) Yasm assembler (complete rewrite of NASM assembler) optional - Nasm
  2) GNU Gold Linker
  3) Data Display Debugger (to check the status/state of registers or memory)
