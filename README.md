@@ -16,8 +16,8 @@ x86 assembly basics using yasm assembler and gold linker
   
 # How to run it?
   1) yasm -g dwarf2 -f elf64 <example>.asm -l <example>.lst  //assemble the example.asm file using yasm assembler and include list file
-  2) ld -g -o <example> <example>.o //linking/combining the assembly source file into one single object file
-  3) ./<example> //loading the executable file into memory
-  4) ddd <example> //start ddd debugger
+  2) ld -g -o <example> <example>.o                          //linking/combining the assembly source file into one single object file
+  3) ./<example>                                             //loading the executable file into memory
+  4) ddd <example>                                           //start ddd debugger
   
 # Manual for DDD Debugger - https://www.gnu.org/software/ddd/manual/
