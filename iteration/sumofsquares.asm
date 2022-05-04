@@ -12,16 +12,16 @@ global _start
 _start:
   mov ax,1
   mov cx,word[counter]
-  mov dx,1
+  mov bx,1
   jmp iteration
 
 iteration:
-   mov ax,dx
+   mov ax,bx
    mul ax 
    add word[sum],ax
-   inc dx
+   inc bx
    loop iteration
-   mov bx,word[sum]
+   mov dx,word[sum]
 
 last:
    mov rax,60
