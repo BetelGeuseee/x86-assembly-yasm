@@ -7,16 +7,16 @@ average db 0
 section .text
 global _start
 _start:
-  mov bl,listOfNumbers
-  mov cl,byte[counter]
+  mov ebx,listOfNumbers
+;   mov cl,byte[counter]
 
-iteration:
-  mov al,[ebx]
-  add byte[sum],al
-  add ebx,1
-  dec cl
-  cmp cl,0 
-  jne iteration
+; iteration:
+;   mov al,[ebx]
+;   add byte[sum],al
+;   add ebx,1
+;   dec cl
+;   cmp cl,0 
+;   jne iteration
 
 last:
   mov rax,60
