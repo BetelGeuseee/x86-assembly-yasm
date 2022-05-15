@@ -18,6 +18,7 @@
     cdq 
     idiv dword[%2]
     mov dword[%3],eax
+   ; mov ebx,eax
 %endmacro
 
 ;define data
@@ -26,9 +27,9 @@ list1 dd 4,5,2,-3,1
 len1 dd 5
 ave1 dd 0
 
-list2 dd 2,6,3,-2,1,8,19
-len2 dd 7
-ave2 dd 0 
+ list2 dd 2,6,3,-2,1,8,19
+ len2 dd 7
+ ave2 dd 0 
 
 section .text
 global _start
